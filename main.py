@@ -7,7 +7,7 @@
 # they choose to quit, and can replay each game as desired.
 
 import guessing_game
-import rock_paper_scissors_game()
+import rock_paper_scissors_game
 
 def main():
     """Main entry point of the program.
