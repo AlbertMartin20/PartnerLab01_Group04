@@ -22,15 +22,16 @@ def play_guessing_game():
     
     After each round, the player is asked if they want to play again.
     """
-    play_again = "Y"
+    play_again = "Y" # sentinel to control replay of full rounds
     while play_again.upper() == "Y":
-        secret_number = random.randint(1, 100)
+        secret_number = random.randint(1, 100) # hidden number the user must guess
         tries = 5
         print("\nI'm thinking of a number between 1 and 100.")
         print(f"Guess what it is. You have {tries} tries:", end=" ")
 
         attempt = 0  # track number of guesses
         while tries > 0:
+            # Read a guess; re-prompt if input is not an integer
             try:
                 guess = int(input())
             except ValueError:
@@ -38,17 +39,18 @@ def play_guessing_game():
                 continue
 
             attempt += 1
-
+            # Correct guess path 
             if guess == secret_number:
                 if attempt == 1:
                     print("Incredible!!! You guessed it on the FIRST try! Jackpot Winner!")
                 else:
                     print("Congratulations! You guessed the number correctly. Well done!")
                 break
+            # Wrong guess path: compute hint & decrement tries 
             else:
                 tries -= 1
                 difference = abs(secret_number - guess)
-
+                # Directional + proximity hint: "Too high/Too low" (far), "High/Low" (close)
                 if guess < secret_number:
                     if difference > 10:
                         hint = "Too low!"
@@ -60,6 +62,7 @@ def play_guessing_game():
                     else:
                         hint = "High!"
 
+                # If there are tries left, prompt again; otherwise reveal the number
                 if tries > 0:
                     print(f"Nope! {hint} Try again ({tries} tries left):", end=" ")
                 else:
