@@ -15,8 +15,7 @@ def main():
     Lets the user choose between:
         1. Guessing Game
         2. Rock-Paper-Scissors
-        3. Dice Roll
-        4. Quit
+        3. Quit
     Runs the selected game and keeps looping until the user chooses to quit.
     """
     while True:
