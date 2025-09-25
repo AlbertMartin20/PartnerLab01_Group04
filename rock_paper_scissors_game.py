@@ -1,3 +1,9 @@
+# Lab 1
+# Group 4
+# Author of this game: Joey Zhen
+# 09/23/2025
+
+
 import random
 
 def rock_paper_scissors():
@@ -45,3 +51,4 @@ def rock_paper_scissors():
 
 # The function to start the game
 rock_paper_scissors()
+
