@@ -49,7 +49,3 @@ def rock_paper_scissors():
 
     print("Okay, thanks for playing!")
 
-# The function to start the game
-rock_paper_scissors()
-
-
