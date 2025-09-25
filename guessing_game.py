@@ -1,7 +1,27 @@
+# Lab 1
+# Group 4
+# Author: Thant Zin Aung
+# Date: 09/25/2025
 import random
 
 def play_guessing_game():
-    """Run the guessing game with detailed hints and positive win messages."""
+    """Play the Guessing Game.
+    
+    The computer generates a random number between 1 and 100.
+    The player has 5 tries to guess the number. After each guess,
+    the program provides hints:
+        - "Too high/Too low" if the guess is far off (difference > 10).
+        - "High/Low" if the guess is close (difference ≤ 10).
+    
+    Special Features:
+        - If the player guesses correctly on the first try, a jackpot
+          message is shown.
+        - If the player guesses correctly on later tries, a congratulatory
+          message is displayed.
+        - If the player runs out of tries, the secret number is revealed.
+    
+    After each round, the player is asked if they want to play again.
+    """
     play_again = "Y"
     while play_again.upper() == "Y":
         secret_number = random.randint(1, 100)
