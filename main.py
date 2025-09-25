@@ -1,5 +1,5 @@
 import guessing_game
-#from dice_game import roll_dice
+import rock_paper_scissors_game()
 
 def main():
     while True:
@@ -13,7 +13,7 @@ def main():
         if choice == "1":
             guessing_game.play_guessing_game()
         elif choice == "2":
-            pass
+            rock_paper_scissors_game.rock_paper_scissors()
         elif choice == "3":
             print("Goodbye!")
             break
