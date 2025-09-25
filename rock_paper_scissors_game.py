@@ -5,8 +5,19 @@ def rock_paper_scissors():
 
     # Loop runs only while the user keeps saying "yes"
     while play == "yes":
-        # Ask for user choice
-        user_choice = int(input("Enter your choice: 1. paper, 2. scissors, 3. rock: "))
+        try:
+            # Ask for user choice
+            user_choice = int(input("Enter your choice: 1. paper, 2. scissors, 3. rock: "))
+            
+            # Check if choice is valid
+            if user_choice not in [1, 2, 3]:
+                print("Invalid choice! Please enter 1, 2, or 3.\n")
+                continue  # restart the round
+
+        except ValueError:
+            # Handle non-numeric input
+            print("Invalid input! Please enter a number (1, 2, or 3).\n")
+            continue  # restart the round
 
         # Computer's choice
         computer_choice = random.randint(1, 3)
@@ -32,5 +43,5 @@ def rock_paper_scissors():
 
     print("Okay, thanks for playing!")
 
-# Call the function to start the game
+# The function to start the game
 rock_paper_scissors()
