@@ -1,7 +1,24 @@
+# Lab 1
+# Group 4
+# Author: Joey Zhen & Thant Zin Aung
+# Date: 09/25/2025
+# Description: This program lets the user play multiple games (Guessing Game and
+# Rock-Paper-Scissors). The user selects from a menu, plays until
+# they choose to quit, and can replay each game as desired.
+
 import guessing_game
 import rock_paper_scissors_game()
 
 def main():
+    """Main entry point of the program.
+    Displays a welcome message and a menu of games. 
+    Lets the user choose between:
+        1. Guessing Game
+        2. Rock-Paper-Scissors
+        3. Dice Roll
+        4. Quit
+    Runs the selected game and keeps looping until the user chooses to quit.
+    """
     while True:
         print("\n=== Main Menu ===")
         print("1. Play Guessing Game")
