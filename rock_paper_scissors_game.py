@@ -7,6 +7,25 @@
 import random
 
 def rock_paper_scissors():
+    """Play the Rock-Paper-Scissors game.
+
+    The player is asked if they want to play. If they agree, the game runs in rounds:
+        - The player selects a choice by entering a number:
+            1 = paper
+            2 = scissors
+            3 = rock
+        - The computer randomly selects one of the three choices.
+        - Both choices are displayed, and the winner is determined using the rules:
+            - Paper beats Rock
+            - Scissors beat Paper
+            - Rock beats Scissors
+            - Same choice results in a tie.
+        - Invalid or non-numeric input is handled with error messages, and
+          the player is prompted again.
+        - After each round, the player can choose to play again by typing "yes."
+
+    The loop continues until the player answers "no" when asked to play again.
+    """
     play = input("Do you want to play? (yes/no): ").strip().lower()
 
     # Loop runs only while the user keeps saying "yes"
@@ -48,4 +67,5 @@ def rock_paper_scissors():
         play = input("Do you want to play again? (yes/no): ").strip().lower()
 
     print("Okay, thanks for playing!")
+
 
