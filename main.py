@@ -19,6 +19,8 @@ def main():
     Runs the selected game and keeps looping until the user chooses to quit.
     """
     while True:
+        print("Welcome to Lab 1 Game Collection!")
+        print("You can play Guessing Game or Rock-Paper-Scissors. Choose from the menu below.")
         print("\n=== Main Menu ===")
         print("1. Play Guessing Game")
         print("2. Rock Paper Scissors")
